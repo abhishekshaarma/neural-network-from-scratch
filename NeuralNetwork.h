@@ -40,7 +40,7 @@ public:
         {
             MatrixXd next_weights = layers[i + 1].get_weights();
             VectorXd next_delta = layers[i + 1].get_delta();
-            VectorXd hidden_error = next_weights *next_delta;
+            VectorXd hidden_error = next_weights * next_delta;
             VectorXd hidden_derivative = layers[i].derivative_of_activation_function();
             VectorXd hidden_delta = hidden_error.cwiseProduct(hidden_derivative);
             layers[i].set_delta(hidden_delta);
@@ -79,7 +79,10 @@ public:
                 VectorXd target_output = target_outputs[i];
 
                 forward(input);
-
+                if (i % (inputs.size() / 20) == 0)
+                {
+                    std::cout << "." << std::flush;
+                }
                 VectorXd output = get_output();
                 double loss = functions::error_function(output, target_output);
                 epoch_loss += loss;

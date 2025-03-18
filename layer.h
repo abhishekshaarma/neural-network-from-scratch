@@ -21,8 +21,8 @@ public:
           std::function<VectorXd(const VectorXd &)> activation_function_derivative)
         :activation_function(activation_function),  // But assigning to "activation_function"
          activation_function_derivative(activation_function_derivative)    {
-//        weights = MatrixXd::Random(input_size_neurons, neurons);
-        weights = MatrixXd::Random(neurons, input_size_neurons) * sqrt(1.0 / input_size_neurons);
+        weights = MatrixXd::Random(input_size_neurons, neurons);
+        // weights = MatrixXd::Random(neurons, input_size_neurons) * sqrt(1.0 / input_size_neurons);
 
 
 
@@ -62,8 +62,7 @@ void forward(const VectorXd &input)
    
     void update_weight(const VectorXd& input, double learning_rate)
     {
-        weights = weights - learning_rate * (delta * input.transpose());
-        
+        weights = weights - learning_rate * (input * delta.transpose());        
         biases  = biases - learning_rate * delta;
         // In Layer::update_weight 
         if (delta.array().isNaN().any()) std::cout << "NaN in delta" << std::endl;

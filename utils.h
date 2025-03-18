@@ -133,6 +133,25 @@ namespace utils
             }
         }
     }
+    
+        // Display an MNIST image as ASCII art
+        void display_ascii_image(const VectorXd& image, int width, int height) {
+            for (int y = 0; y < height; y++) {
+                for (int x = 0; x < width; x++) {
+                    double pixel = image(y * width + x);
+                    // Map pixel values to ASCII characters based on intensity
+                    char c = ' ';
+                    if (pixel > 0.9) c = '#';
+                    else if (pixel > 0.7) c = '+';
+                    else if (pixel > 0.5) c = '*';
+                    else if (pixel > 0.3) c = '-';
+                    else if (pixel > 0.1) c = '.';
+                    std::cout << c << c; // Print each pixel as two chars for better aspect ratio
+                }
+                std::cout << std::endl;
+            }
+        }
+    
 }
 
 #endif 
