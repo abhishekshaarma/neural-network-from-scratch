@@ -88,15 +88,3 @@ Epoch 2/3 - Loss: 0.08456
 Epoch 3/3 - Loss: 0.06781
 Test Accuracy: 0.9231
 ```
-
-## Future Improvements
-
-- Add support for different activation functions (ReLU, tanh)
-- Implement mini-batch gradient descent
-- Add regularization techniques (L1, L2)
-- Implement additional optimization algorithms (Adam, RMSProp)
-- Add support for dropout layers
-
-## License
-
-This project is open source and available under the MIT License.
