@@ -1,19 +1,11 @@
 # Neural Network Implementation from Scratch
 
-A C++ implementation of a fully-connected neural network built from scratch, optimized with the Eigen library for efficient matrix operations. (should I also upload my notes?)
+A C++ implementation of a neural network built from scratch, optimized with the Eigen library for efficient matrix operations. (should I also upload my notes?)
 
 ## Overview
 
-This project implements a feedforward neural network with customizable architecture for handwritten digit classification using the MNIST dataset. The implementation features gradient descent optimization with backpropagation for training.
+This project implements a feedforward neural network with customizable architecture for handwritten digit classification using the MNIST dataset(thank you for the dataset and for making it available). The implementation features gradient descent optimization with backpropagation for training.
 
-## Features
-
-- Fully-connected neural network with configurable layers
-- Sigmoid activation function and its derivative
-- Gradient descent optimization
-- Backpropagation algorithm
-- MNIST dataset integration
-- Weight initialization strategies for numerical stability
 
 ## Dependencies
 
@@ -81,6 +73,7 @@ nn.test(test_dataset, label_test_dataset);
 ## Example Results
 
 The network achieves reasonable accuracy on the MNIST dataset after just a few epochs:
+![result](https://github.com/user-attachments/assets/2e7be963-5f41-4e31-b74a-f984d6a9dfbb)
 
 ```
 Epoch 1/3 - Loss: 0.14287
