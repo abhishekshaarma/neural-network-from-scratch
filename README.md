@@ -73,5 +73,6 @@ nn.test(test_dataset, label_test_dataset);
 ## Example Results
 
 The network achieves reasonable accuracy on the MNIST dataset after just a few epochs:
+This output is for a smaller base because my vm kept taking alot of time and I have no patience.
 ![result](https://github.com/user-attachments/assets/2e7be963-5f41-4e31-b74a-f984d6a9dfbb)
 
