@@ -1,6 +1,6 @@
 # Neural Network Implementation from Scratch
 
-A C++ implementation of a fully-connected neural network built from scratch, optimized with the Eigen library for efficient matrix operations.
+A C++ implementation of a fully-connected neural network built from scratch, optimized with the Eigen library for efficient matrix operations. (should I also upload my notes?)
 
 ## Overview
 
