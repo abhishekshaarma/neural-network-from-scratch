@@ -75,9 +75,3 @@ nn.test(test_dataset, label_test_dataset);
 The network achieves reasonable accuracy on the MNIST dataset after just a few epochs:
 ![result](https://github.com/user-attachments/assets/2e7be963-5f41-4e31-b74a-f984d6a9dfbb)
 
-```
-Epoch 1/3 - Loss: 0.14287
-Epoch 2/3 - Loss: 0.08456
-Epoch 3/3 - Loss: 0.06781
-Test Accuracy: 0.9231
-```
